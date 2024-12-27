@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
@@ -20,8 +21,8 @@
 &kp TAB           &kp Q   &kp W   &kp E      &kp R         &kp T       &kp Y      &kp U      &kp I      &kp O       &kp P     &kp BSLH
 &kp LEFT_CONTROL  &kp A   &kp S   &kp D      &kp F         &kp G       &kp H      &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
 &kp LEFT_SHIFT    &kp Z   &kp X   &kp C      &kp V         &kp B       &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &mo 2
-                                  &kp SPACE  &kp LEFT_ALT  &mo 1       &kp LWIN   &kp ENTER
-                                             &mkp MB1      &mkp MB2    &kp GRAVE
+                                  &kp SPACE  &kp LEFT_ALT  &mo 1       &kp LWIN   &kp SPACE
+                                             &mkp MB1      &mkp MB2    &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -33,7 +34,7 @@
 &kp CAPS  &trans           &trans           &trans           &trans           &bt BT_NXT    &kp PAGE_UP    &trans    &kp UP    &trans     &trans   &kp DEL
 &trans    &trans           &trans           &trans           &trans           &bt BT_CLR    &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
 &trans    &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &trans        &trans         &trans    &trans    &trans     &trans   &trans
-                                            &trans           &trans           &trans        &trans         &trans
+                                            &trans           &trans           &trans        &kp LA(GRAVE)  &trans
                                                              &trans           &trans        &trans
             >;
 
@@ -42,12 +43,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans            &trans             &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp MINUS         &kp EQUAL          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans             &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                             &trans  &trans  &trans    &trans  &trans
-                                                     &trans  &trans    &trans
+&kp GRAVE  &trans            &trans             &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp MINUS         &kp EQUAL          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans            &trans             &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans  &trans  &trans    &trans  &trans
+                                                        &trans  &trans    &trans
             >;
         };
 
