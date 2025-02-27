@@ -13,6 +13,45 @@
 
 / {
     macros {
+        Mo1_macro: Mo1_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Mo1_macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &mo 1> 
+        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50)>
+        , <&macro_wait_time 30>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo 1>
+        , <&macro_wait_time 30>
+        , <&macro_tap &rgb_ug RGB_EFR>;
+        };
+
+        Mo2_macro: Mo2_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Mo2_macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &mo 2> 
+        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(200,100,50)>
+        , <&macro_wait_time 30>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo 2>
+        , <&macro_wait_time 30>
+        , <&macro_tap &rgb_ug RGB_EFR>;
+        };            
+
+        Mo3_macro: Mo3_macro {
+            compatible = "zmk,behavior-macro";
+            label = "Mo3_macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &mo 3> 
+        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(300,100,50)>
+        , <&macro_wait_time 30>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo 3>
+        , <&macro_wait_time 30>
+        , <&macro_tap &rgb_ug RGB_EFR>;
+        };
+
         To1_macro: To1_macro {
             compatible = "zmk,behavior-macro";
             label = "To1_macro";
