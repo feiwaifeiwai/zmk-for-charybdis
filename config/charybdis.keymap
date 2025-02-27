@@ -17,39 +17,54 @@
             compatible = "zmk,behavior-macro";
             label = "Mo1_macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mo 1> 
-        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50)>
-        , <&macro_wait_time 30>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo 1>
-        , <&macro_wait_time 30>
-        , <&macro_tap &rgb_ug RGB_EFR>;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50)>,
+                <&macro_wait_time 30>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
         };
 
         Mo2_macro: Mo2_macro {
             compatible = "zmk,behavior-macro";
             label = "Mo2_macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mo 2> 
-        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(200,100,50)>
-        , <&macro_wait_time 30>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo 2>
-        , <&macro_wait_time 30>
-        , <&macro_tap &rgb_ug RGB_EFR>;
-        };            
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(200,100,50)>,
+                <&macro_wait_time 30>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
+        };
 
         Mo3_macro: Mo3_macro {
             compatible = "zmk,behavior-macro";
             label = "Mo3_macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &mo 3> 
-        , <&macro_tap &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(300,100,50)>
-        , <&macro_wait_time 30>
-        , <&macro_pause_for_release>
-        , <&macro_release &mo 3>
-        , <&macro_wait_time 30>
-        , <&macro_tap &rgb_ug RGB_EFR>;
+            bindings =
+                <&macro_press>,
+                <&mo 3>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(300,100,50)>,
+                <&macro_wait_time 30>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 3>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&rgb_ug RGB_EFR>;
         };
 
         To1_macro: To1_macro {
@@ -85,8 +100,8 @@
 &kp ESC           &kp N1  &kp N2  &kp N3     &kp N4        &kp N5        &kp N6     &kp N7     &kp N8     &kp N9      &kp N0    &kp BACKSPACE
 &kp TAB           &kp Q   &kp W   &kp E      &kp R         &kp T         &kp Y      &kp U      &kp I      &kp O       &kp P     &kp BSLH
 &kp LEFT_CONTROL  &kp A   &kp S   &kp D      &kp F         &kp G         &kp H      &kp J      &kp K      &kp L       &kp SEMI  &kp SQT
-&kp LEFT_SHIFT    &kp Z   &kp X   &kp C      &kp V         &kp B         &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &To2_macro
-                                  &kp SPACE  &kp LEFT_ALT  &To1_macro    &kp LWIN   &kp SPACE
+&kp LEFT_SHIFT    &kp Z   &kp X   &kp C      &kp V         &kp B         &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &Mo2_macro
+                                  &kp SPACE  &kp LEFT_ALT  &Mo1_macro    &kp LWIN   &kp SPACE
                                              &mkp MB1      &mkp MB2      &kp ENTER
             >;
         };
